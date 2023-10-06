@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroImage from "../public/HeroSection.jpg";
+import FeaturedProductList from "./components/FeaturedProductList";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
         />
       </section>
       <h1>Featured products</h1>
-      {/* <ProductList /> */}
+      <FeaturedProductList />
     </main>
   );
 }

@@ -1,7 +1,7 @@
 "use client";
 export default function Card({ productData }) {
   function handleClick() {
-    alert("I was click");
+    alert(productData.id);
   }
   return (
     <div onClick={handleClick}>
