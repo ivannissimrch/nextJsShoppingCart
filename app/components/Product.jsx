@@ -1,4 +1,4 @@
-// "use client";
+import Link from "next/link";
 import Card from "./Card";
 
 async function getProducts(id) {
@@ -10,18 +10,14 @@ async function getProducts(id) {
   }
 }
 
-// eslint-disable-next-line @next/next/no-async-client-component
 export default async function Product({ id }) {
   const product = await getProducts(id);
-  // const handleClick = () => {
-  //Add product to cart
-  //navigate to cart
-  // };
+
   return (
     <div>
       <Card productData={product} key={product.id} />
       <p>{product.description}</p>
-      {/* <button onClick={handleClick}>Add to Cart</button> */}
+      <Link href={{ pathname: "/cart", query: product }}>Add To Cart</Link>
     </div>
   );
 }
