@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Card from "./Card";
+import AddToCartButton from "./AddToCartButton";
 
 async function getProducts(id) {
   const response = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -17,7 +17,7 @@ export default async function Product({ id }) {
     <div>
       <Card productData={product} key={product.id} />
       <p>{product.description}</p>
-      <Link href={{ pathname: "/cart", query: product }}>Add To Cart</Link>
+      <AddToCartButton product={product} />
     </div>
   );
 }

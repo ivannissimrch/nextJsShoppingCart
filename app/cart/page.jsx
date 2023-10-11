@@ -1,5 +1,4 @@
-export default function CartPage({ searchParams }) {
-  console.log(searchParams);
+export default function CartPage() {
   return (
     <main>
       <h1>Display producst on Cart</h1>
