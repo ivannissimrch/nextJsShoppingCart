@@ -1,7 +1,9 @@
+import ProductsOnCartList from "../components/ProductsOnCartList";
+
 export default function CartPage() {
   return (
     <main>
-      <h1>Display producst on Cart</h1>
+      <ProductsOnCartList />
     </main>
   );
 }

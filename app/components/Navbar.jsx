@@ -8,8 +8,9 @@ export default function Navbar() {
         <ul>
           <Link href="/">Home</Link>
           <Link href="/products">Products</Link>
-          <Link href="/cart">Cart</Link>
-          <Cart />
+          <Link href="/cart">
+            <Cart />
+          </Link>
         </ul>
       </nav>
     </header>
