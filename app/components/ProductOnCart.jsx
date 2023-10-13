@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import Image from "next/image";
 
 export default function ProductOnCart({ productData }) {
   const { deleteProduct, editProductAmount } = useContext(CartContext);
@@ -26,7 +27,7 @@ export default function ProductOnCart({ productData }) {
 
   return (
     <div>
-      <img src={productData.image} alt="product" width={200} height={200} />
+      <Image src={productData.image} alt="product" width={200} height={200} />
       <h4>{`Price : $${productData.price}`}</h4>
       <div>
         <button onClick={handleDelete} name={productData.title}>

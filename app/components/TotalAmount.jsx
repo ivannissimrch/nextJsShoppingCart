@@ -5,7 +5,6 @@ import { CartContext } from "./CartContext";
 
 export default function TotalAmount() {
   const { productsOnCart } = useContext(CartContext);
-  console.log(productsOnCart);
 
   const totalAmount = productsOnCart.reduce((total, product) => {
     return total + product.price * product.amount;
