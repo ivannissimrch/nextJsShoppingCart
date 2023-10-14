@@ -3,6 +3,7 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import Image from "next/image";
+import { MdAdd, MdRemove, MdDelete } from "react-icons/md";
 
 export default function ProductOnCart({ productData }) {
   const { deleteProduct, editProductAmount } = useContext(CartContext);
@@ -30,17 +31,21 @@ export default function ProductOnCart({ productData }) {
       <Image src={productData.image} alt="product" width={200} height={200} />
       <h4>{`Price : $${productData.price}`}</h4>
       <div>
-        <button onClick={handleDelete} name={productData.title}>
-          Delete
-        </button>
         <div>
           <label> Quantity</label>
           <div>
-            <button onClick={handleDecreaseQuantity}>-</button>
+            <button onClick={handleDecreaseQuantity}>
+              <MdRemove />
+            </button>
             <label>{amount}</label>
-            <button onClick={handleIncreaseQuantity}>+</button>
+            <button onClick={handleIncreaseQuantity}>
+              <MdAdd />
+            </button>
           </div>
         </div>
+        <button onClick={handleDelete} name={productData.title}>
+          <MdDelete />
+        </button>
       </div>
     </div>
   );
