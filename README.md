@@ -4,8 +4,7 @@
 
 ### Project Objective
 
-This project aimed to gain experience using Next.js and Tailwind CSS.
-
+This project aimed to make a shopping cart and gain experience using Next.js and Tailwind CSS.
 I employed the new app router to create the following pages
 
 - home

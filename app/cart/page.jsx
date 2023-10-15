@@ -3,7 +3,7 @@ import TotalAmount from "../components/TotalAmount";
 
 export default function CartPage() {
   return (
-    <main>
+    <main className="flex-col justify-center items-center">
       <ProductsOnCartList />
       <TotalAmount />
     </main>

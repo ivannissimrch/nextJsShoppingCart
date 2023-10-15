@@ -13,6 +13,10 @@ export default function TotalAmount() {
   if (totalAmount === 0) {
     return "Cart is empty";
   } else {
-    return <span>Total Amount : {totalAmount.toFixed(2)}</span>;
+    return (
+      <div className="flex justify-center items-center p-2">
+        Total Amount : {totalAmount.toFixed(2)}
+      </div>
+    );
   }
 }
