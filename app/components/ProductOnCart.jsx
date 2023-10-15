@@ -3,6 +3,7 @@
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 import Image from "next/image";
+import { MdAdd, MdRemove } from "react-icons/md";
 
 export default function ProductOnCart({ productData }) {
   const { deleteProduct, editProductAmount } = useContext(CartContext);
@@ -26,21 +27,28 @@ export default function ProductOnCart({ productData }) {
   };
 
   return (
-    <div>
+    <div className="flex-col justify-center items-cente m-4 p-4">
       <Image src={productData.image} alt="product" width={200} height={200} />
-      <h4>{`Price : $${productData.price}`}</h4>
-      <div>
-        <button onClick={handleDelete} name={productData.title}>
-          Delete
-        </button>
+      <div className="flex-col justify-center items-center mt-2">
+        <h4>{`Price : $${productData.price}`}</h4>
+        <label> Quantity</label>
         <div>
-          <label> Quantity</label>
-          <div>
-            <button onClick={handleDecreaseQuantity}>-</button>
-            <label>{amount}</label>
-            <button onClick={handleIncreaseQuantity}>+</button>
-          </div>
+          <button onClick={handleDecreaseQuantity} className="p-2">
+            <MdRemove />
+          </button>
+          <label className="p-2">{amount}</label>
+          <button onClick={handleIncreaseQuantity} className="p-2">
+            <MdAdd />
+          </button>
         </div>
+
+        <button
+          onClick={handleDelete}
+          name={productData.title}
+          class="text-white bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+        >
+          Remove
+        </button>
       </div>
     </div>
   );

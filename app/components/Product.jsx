@@ -14,9 +14,9 @@ export default async function Product({ id }) {
   const product = await getProducts(id);
 
   return (
-    <div>
+    <div className="flex-col justify-center items-center w-40">
       <Card productData={product} key={product.id} />
-      <p>{product.description}</p>
+      <p className="w-40 mb-4 ">{product.description}</p>
       <AddToCartButton product={product} />
     </div>
   );

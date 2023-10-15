@@ -4,8 +4,8 @@ import FeaturedProductList from "./components/FeaturedProductList";
 
 export default function Home() {
   return (
-    <main>
-      <section>
+    <main className="flex-col">
+      <section className="flex justify-center items-center">
         <Image
           src={HeroImage}
           alt="Weekend Sale Image"
@@ -14,8 +14,10 @@ export default function Home() {
           placeholder="blur"
         />
       </section>
-      <h1>Featured products</h1>
-      <FeaturedProductList />
+      <section className="flex-col justify-center items-center">
+        <h1 className="text-center p-2">Featured products</h1>
+        <FeaturedProductList />
+      </section>
     </main>
   );
 }
