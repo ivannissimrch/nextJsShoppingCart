@@ -12,7 +12,7 @@ export default function Cart() {
   }, 0);
 
   return (
-    <span>
+    <span className="flex items-center">
       <MdShoppingCart /> {totalProducts === 0 ? "" : totalProducts}
     </span>
   );

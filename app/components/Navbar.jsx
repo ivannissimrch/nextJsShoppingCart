@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <header>
       <nav>
-        <ul>
+        <ul className="flex">
           <Link href="/">Home</Link>
           <Link href="/products">Products</Link>
           <Link href="/cart">
