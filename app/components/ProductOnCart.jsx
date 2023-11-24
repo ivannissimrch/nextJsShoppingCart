@@ -27,7 +27,7 @@ export default function ProductOnCart({ productData }) {
   };
 
   return (
-    <div className="flex flex-col justify-center items-cente m-4 p-4">
+    <div className="flex flex-col justify-center items-center m-4 p-4 bg-white rounded-md">
       <Image src={productData.image} alt="product" width={200} height={200} />
       <div className="flex flex-col justify-center items-center mt-2">
         <h4>{`Price : $${productData.price}`}</h4>
@@ -41,7 +41,6 @@ export default function ProductOnCart({ productData }) {
             <MdAdd />
           </button>
         </div>
-
         <button
           onClick={handleDelete}
           name={productData.title}
