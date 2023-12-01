@@ -13,10 +13,13 @@ export default async function ProductList() {
   const products = await getProducts();
 
   return (
-    <div className="flex sm:flex-row flex-wrap justify-center items-stretch p-4 bg-slate-200 my-4">
+    <>
+      <h1 className="p-2 font-bold text-lg sm:text-4xl w-full text-center">
+        All products
+      </h1>
       {products.map((product) => (
         <Card productData={product} key={product.id} />
       ))}
-    </div>
+    </>
   );
 }

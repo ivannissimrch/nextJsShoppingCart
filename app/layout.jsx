@@ -16,11 +16,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <CartContextProvider>
-          <Navbar />
-          <main className="flex flex-col justify-center items-center sm:max-w-6x">
-            {children}
+          <main className="flex flex-col justify-between items-center min-h-screen">
+            <Navbar />
+            <section className="w-full sm:max-w-6xl">{children}</section>
+            <Footer />
           </main>
-          <Footer />
         </CartContextProvider>
       </body>
     </html>

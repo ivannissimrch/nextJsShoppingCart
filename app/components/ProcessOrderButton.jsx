@@ -10,15 +10,13 @@ export default function ProcessOrderButton() {
     deleteAllProducts();
   };
   return (
-    <div className="flex justify-center">
-      <Link
-        onClick={handleClick}
-        href="/checkout"
-        className="text-white bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
-      >
-        {" "}
-        Checkout
-      </Link>
-    </div>
+    <Link
+      onClick={handleClick}
+      href="/checkout"
+      className="text-white bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 mb-2"
+    >
+      {" "}
+      Checkout
+    </Link>
   );
 }

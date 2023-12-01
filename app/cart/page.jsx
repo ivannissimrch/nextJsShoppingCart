@@ -1,11 +1,12 @@
 import ProductsOnCartList from "../components/ProductsOnCartList";
 import TotalAmount from "../components/TotalAmount";
+import ProducstContainer from "../components/ProductsContainer";
 
 export default function CartPage() {
   return (
-    <main className="p-4 bg-slate-200 my-4 w-screen min-h-screen sm:max-w-6xl flex flex-col justify-center items-center">
+    <div className="p-4 bg-slate-200 my-4 flex flex-col justify-center items-center md:p-8">
       <ProductsOnCartList />
       <TotalAmount />
-    </main>
+    </div>
   );
 }

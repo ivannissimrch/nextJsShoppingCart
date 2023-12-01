@@ -16,10 +16,13 @@ export default async function FeaturedProductList() {
   const products = await getProducts(quantity);
 
   return (
-    <div className="flex flex-col sm:max-w-6xl sm:flex-row sm:flex-wrap justify-center">
+    <>
+      <h1 className="p-2 font-bold text-lg sm:text-4xl w-full text-center">
+        Featured products
+      </h1>
       {products.map((product) => (
         <Card productData={product} key={product.id} />
       ))}
-    </div>
+    </>
   );
 }
