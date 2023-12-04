@@ -14,10 +14,10 @@ export default async function Product({ id }) {
   const product = await getProducts(id);
 
   return (
-    <div className="flex flex-col justify-center items-center bg-white m-8 rounded-md">
-      <div className="flex flex-col justify-center items-center sm:flex-row m-8">
+    <div className="flex flex-col justify-center items-center bg-white m-4 rounded-md sm:min-w-full">
+      <div className="flex flex-col justify-center items-center sm:flex-row m-4 sm:min-w-full">
         <Card productData={product} key={product.id} />
-        <p className="mb-4 w-40 p-2 sm:max-w-sm overflow-scroll">
+        <p className="mb-4 w-40  sm:w-9/12 sm:p-4 overflow-x-auto sm:scroll-m-0">
           {product.description}
         </p>
       </div>
